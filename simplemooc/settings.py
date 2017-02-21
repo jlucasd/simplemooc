@@ -139,3 +139,8 @@ EMAIL_HOST_SENHA = 'nicolasanelka1'
 EMAIL_PORT = 587
 
 CONTACT_EMAIL = 'jlucasd01@gmail.com'
+
+#Autenticação
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'core:home'
+LOGOUT_URL = 'accounts:logout'
