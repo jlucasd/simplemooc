@@ -8,5 +8,5 @@ mock==1.0.1
 model-mommy==1.2
 psycopg2==2.5.3
 pystache==0.5.4
-six==1.4.1
+six==latest
 static==1.0.2
