@@ -123,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 APPLICATION_NAME = 'simplemooc'
 
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, APPLICATION_NAME, 'media')
 
@@ -159,6 +159,6 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-STATIC_FILES_DIRS = (
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static')
 )
