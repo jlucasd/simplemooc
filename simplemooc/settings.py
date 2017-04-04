@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=#5u4q9yi*(6s!ht&il_8vkzfe^tod^x5f)&1q!9ot+y(tw3%3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['192.168.99.100']
 
@@ -73,18 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'simplemooc.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -149,7 +137,9 @@ AUTH_USER_MODEL = 'accounts.User'
 
 # Heroku settings
 import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+DATABASES = {
+    'default': dj_database_url.config(),
+}
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDER_PROTO', 'https')
 
@@ -163,3 +153,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static' ),
 )
+
+try:
+    from simplemooc.local_settings import *
+except ImportError:
+    pass
