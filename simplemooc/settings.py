@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #libs
+    'taggit',
+    #apps
     'simplemooc.core',
     'simplemooc.accounts',
     'simplemooc.courses',
