@@ -11,3 +11,4 @@ pystache==0.5.4
 six==1.10.0
 whitenoise==3.3.0
 static==1.0.2
+django-taggit==latest
