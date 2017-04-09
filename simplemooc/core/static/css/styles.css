@@ -153,6 +153,7 @@ form.pure-form-aligned ul.errorlist li {
 .pure-form .pure-control-group {
     margin-bottom: 1em;
 }
+
 .pure-button-primary {
     background-color: #1f8dd6;
     color: white;
@@ -218,6 +219,19 @@ table.full {
 
 .button-error {
     background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.reply-cancel-correct-lnk {
+    background: rgb(202, 60, 60); /* this is a maroon */
+    color: white;
+    margin: 0 0.1em;
+}
+
+.reply-correct-lnk,
+.reply-correct-msg {
+    background: rgb(28, 184, 65); /* this is a green */
+    color: white;
+    margin: 0 0.1em;
 }
 
 .button-warning {
@@ -361,4 +375,13 @@ aside a, aside a:visited {
 }
 .text-left {
   text-align: left;
+}
+.label-success{
+  background-color: #5aba59;
+  color: #fff;
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+}
+.hidden {
+  display: none;
 }
